@@ -12,7 +12,11 @@ import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 import java.util.Random;
 
-
+/**
+ * Where all the components I will be using are declared.
+ * @author snem8901
+ * @version 1.2 11/20/15
+ */
 public class StupidActivity extends AppCompatActivity
 {
 
@@ -25,7 +29,11 @@ public class StupidActivity extends AppCompatActivity
     private Drawable [] drawables = null;
 
 
-
+    /**
+     * All of my components are found by their id. My resources in the drawable folder are
+     * accessed here as well.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -78,6 +86,9 @@ public class StupidActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * A randomization of colors using math.random and integers.
+     */
     private void changeColors()
     {
         int redColor;
@@ -99,6 +110,10 @@ public class StupidActivity extends AppCompatActivity
     }
 
 
+    /**
+     * Listeners for the color changing button and the kpop idol button. The idol button
+     * is given a random integer to select a different kpop idol picture each time it is pressed.
+     */
     private void setupListeners()
     {
         colorChangeButton.setOnClickListener(new View.OnClickListener()
